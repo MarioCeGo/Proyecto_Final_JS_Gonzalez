@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Administración</title>
+</head>
+<body>
+    <div id="modal"></div>
+    <div class="container-admin">
+        <div class="nav">
+            <h1>Simulador |<p> Administración</p></h1>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="inscripcion.html">Inscripción</a>
+                <a href="">Administración</a>
+                <button id="btnManejarDatos">Datos</button>
+            </nav>
+        </div>
+        
+        
+
+        <div class="container-admin-estudiantes">
+            <div class="container-admin-arb">
+                <h2>Aproba, reprobar o borrar estudiante</h2>
+                <div class="container-admin-arb-input">
+                    <select name="" id="estudiantesInscripto" class="custom-select">
+                        <option value="0" disabled selected>Seleccione estudiante</option>
+                    </select>
+                    <div class="container-admin-arb-input-btn">
+                        <button id="botonAOREstudiante" class="btn">Aprobar o Reprobar</button>
+                        <button id="botonBorrarEstudiante" class="btn btn-secundary">Borrar</button>                        
+                    </div>
+                    
+                    <p id="avisoARB"></p>
+                </div>
+            </div>
+            <div class="container-admin-info">
+                <h3>Informacion:</h3>
+                <p id="porcentajeAprobado">Porcentaje de estudiantes aprobados: </p>
+                <p id="porcentajeReprobado">Porcentaje de estudiantes reprobados: </p>
+            </div>
+            <div class="container-admin-info-estudiante-IRA">
+                <div>
+                    <ul id="listaAdministrarEstudiante" class="lista-administrarEstudiante">
+                        
+                    </ul>
+                </div>
+            </div>
+                       
+        </div>
+
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/class.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/administracion.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>

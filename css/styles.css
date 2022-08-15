@@ -1,0 +1,447 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif;
+  overflow-x: hidden; }
+
+a {
+  text-decoration: none;
+  color: black; }
+
+.nav {
+  grid-area: bar_nav;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  height: 80px;
+  z-index: 1;
+  padding-left: 150px;
+  padding-right: 150px; }
+  .nav h1 p {
+    display: inline;
+    font-size: 24px; }
+  .nav button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer; }
+  .nav nav {
+    font-size: 16px; }
+
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+.btn {
+  width: 150px;
+  height: 50px;
+  background-color: #77c5d5;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer; }
+  .btn-secundary {
+    background: none;
+    border: 2px solid #77c5d5;
+    color: black;
+    transition: all 500ms; }
+    .btn-secundary-cuenta {
+      background: none;
+      border: 2px solid #77c5d5;
+      color: black;
+      transition: all 500ms; }
+    .btn-secundary:hover {
+      background-color: #f44336;
+      border: none;
+      color: white; }
+  .btn-tertiary {
+    background: none;
+    color: black;
+    width: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5px;
+    padding-right: 5px; }
+    .btn-tertiary:hover {
+      text-decoration: underline; }
+  .btn-aprobar {
+    background-color: #4CAF50; }
+  .btn-reprobar {
+    background-color: #f44336; }
+
+.box-info {
+  display: grid;
+  grid-template-areas: "boxInfoImg" "boxInfoTitle" "boxInfoP";
+  grid-template-columns: 250px;
+  grid-template-rows: 150px 25px 100px;
+  align-items: center;
+  justify-items: center; }
+  .box-info img {
+    grid-area: boxInfoImg; }
+  .box-info h3 {
+    grid-area: boxInfoTitle; }
+  .box-info p {
+    grid-area: boxInfoP;
+    text-align: center; }
+
+.modal {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.404);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100; }
+  .modal-info {
+    width: 500px;
+    height: 350px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    padding: 50px; }
+    .modal-info-advertenciaGrave {
+      display: grid;
+      grid-template-areas: "modalImg" "modalTitle" "modalInfo";
+      align-items: center;
+      justify-items: center;
+      grid-template-columns: 100%; }
+      .modal-info-advertenciaGrave #btnConfirmBorrar {
+        transition: all 500ms; }
+        .modal-info-advertenciaGrave #btnConfirmBorrar:hover {
+          background-color: #f44336; }
+      .modal-info-advertenciaGrave #btnCerrarModal {
+        transition: all 500ms; }
+        .modal-info-advertenciaGrave #btnCerrarModal:hover {
+          background-color: #77c5d5; }
+    .modal-info-advertencia {
+      display: grid;
+      grid-template-areas: "modalImg" "modalTitle" "modalInfo" "modalBtn";
+      align-items: center;
+      justify-items: center;
+      grid-template-columns: 100%;
+      padding-top: 30px;
+      padding-bottom: 30px; }
+    .modal-info span {
+      font-weight: bold; }
+    .modal-info p {
+      text-align: center; }
+    .modal-info-datos {
+      display: grid;
+      grid-template-areas: "modalTitle" "modalForm";
+      align-items: center;
+      justify-items: center;
+      grid-template-columns: 100%;
+      position: relative; }
+      .modal-info-datos form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center; }
+        .modal-info-datos form input[type=number] {
+          width: 50%;
+          height: 36px;
+          border-radius: 15px;
+          border: 0px solid rgba(0, 0, 0, 0.342);
+          padding-left: 10px;
+          text-align: center;
+          font-size: 24px;
+          margin-top: 15px;
+          margin-bottom: 15px; }
+          .modal-info-datos form input[type=number]:focus {
+            outline: none; }
+        .modal-info-datos form input {
+          margin: 5px; }
+      .modal-info-datos h2 {
+        font-size: 36px; }
+      .modal-info-datos .btnCerrarModal {
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 15px;
+        transition: all 500ms;
+        background: url("../images/modal/close.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 16px;
+        height: 16px;
+        border: none;
+        cursor: pointer; }
+        .modal-info-datos .btnCerrarModal:hover {
+          transform: rotate(90deg); }
+      .modal-info-datos .btnInfoModal {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 15px;
+        transition: all 500ms;
+        background: url("../images/modal/info.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 16px;
+        height: 16px;
+        border: none;
+        cursor: pointer; }
+        .modal-info-datos .btnInfoModal:hover {
+          animation-duration: 500ms;
+          animation-name: infoAnimation; }
+
+@keyframes infoAnimation {
+  0% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(45deg); }
+  100% {
+    transform: rotate(0deg); } }
+  .modal-zonaBtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly; }
+
+.ocultar {
+  display: none; }
+
+.lista {
+  width: 100%; }
+  .lista-administrarEstudiante {
+    list-style: none; }
+    .lista-administrarEstudiante li {
+      border-bottom: 0.5px solid black;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%; }
+
+.status-estudiante {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%; }
+
+.aprobado {
+  background-color: #4CAF50; }
+
+.reprobado {
+  background-color: #f44336; }
+
+.container-index-info {
+  height: 300px;
+  padding-left: 150px;
+  padding-right: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; }
+
+.banner-inicio {
+  height: 500px;
+  background-image: url("../images/img_inscripcion.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .banner-inicio-info {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #a4dce86e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+  .banner-inicio h1 {
+    font-size: 48px; }
+
+.banner-inscripcion {
+  height: 500px;
+  background-image: url("../images/banner_inscripcion.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .banner-inscripcion-info {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    background: linear-gradient(90deg, #48a9c5, #a4dce86e);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.banner-examen {
+  height: 500px;
+  background-image: url("../images/img_examen.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .banner-examen-info {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    background: linear-gradient(270deg, #48a9c5, #a4dce86e);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.banner-administracion {
+  height: 500px;
+  background-image: url("../images/img_administracion.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; }
+  .banner-administracion-info {
+    color: white;
+    width: 100%;
+    height: 100%;
+    padding-left: 150px;
+    padding-right: 150px;
+    background: linear-gradient(90deg, #48a9c5, #a4dce86e);
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+
+.container-inscripcion {
+  background-image: url("../images/img_inscripcion_3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  position: relative; }
+  .container-inscripcion-estudiante-primer {
+    grid-area: formInscripcion;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0; }
+    .container-inscripcion-estudiante-primer form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      width: 300px;
+      height: 500px;
+      padding: 15px;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); }
+      .container-inscripcion-estudiante-primer form input[type=text], .container-inscripcion-estudiante-primer form input[type=number], .container-inscripcion-estudiante-primer form input[type=date] {
+        width: 100%;
+        height: 36px;
+        text-align: center;
+        font-size: 16px; }
+      .container-inscripcion-estudiante-primer form input[type=button] {
+        margin-top: 50px; }
+  .container-inscripcion-estudiante {
+    grid-area: formInscripcion;
+    display: grid;
+    grid-template-areas: "formI estudiantesI";
+    grid-template-columns: 1fr 1fr;
+    margin-top: 30px;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 50px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px; }
+    .container-inscripcion-estudiante form {
+      grid-template-rows: 120px 120px 120px auto; }
+      .container-inscripcion-estudiante form input[type=text], .container-inscripcion-estudiante form input[type=number], .container-inscripcion-estudiante form input[type=date] {
+        width: 100%;
+        height: 36px;
+        margin: 10px;
+        padding-left: 15px;
+        font-size: 16px; }
+    .container-inscripcion-estudiante-info {
+      grid-area: estudiantesI;
+      padding-left: 50px; }
+      .container-inscripcion-estudiante-info ul {
+        margin-top: 5px; }
+      .container-inscripcion-estudiante-info li {
+        list-style: none;
+        margin-left: 15px;
+        margin-top: 1px; }
+
+.formInscripcionNombres {
+  display: flex; }
+
+.formInscripcionApellidos {
+  display: flex; }
+
+.formularioInscripcion-btn {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; }
+
+.container-exam-info {
+  padding-left: 150px;
+  padding-right: 150px; }
+  .container-exam-info-img {
+    height: 500px;
+    background-image: url("../images/trabajando.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; }
+  .container-exam-info h1 {
+    margin-top: 50px;
+    margin-bottom: 15px; }
+
+.container-admin-estudiantes {
+  display: grid;
+  grid-template-areas: "arb contAdminInfo" "ira ira";
+  grid-template-rows: 200px auto;
+  padding-left: 150px;
+  padding-right: 150px;
+  margin-top: 50px; }
+
+.container-admin-arb {
+  grid-area: arb; }
+  .container-admin-arb-input {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px; }
+    .container-admin-arb-input select {
+      width: 300px;
+      height: 30px; }
+    .container-admin-arb-input-btn {
+      margin-top: 15px; }
+
+.container-admin-info {
+  grid-area: contAdminInfo; }
+  .container-admin-info-estudiante-IRA {
+    grid-area: ira; }
+    .container-admin-info-estudiante-IRA h3 {
+      margin-bottom: 50px; }
+    .container-admin-info-estudiante-IRA table {
+      width: 100%;
+      text-align: center; }
+
+.border {
+  border-left: 2px solid black;
+  border-right: 2px solid black; }

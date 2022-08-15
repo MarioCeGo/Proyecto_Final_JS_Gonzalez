@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Inscripción</title>
+</head>
+<body>
+    <div id="modal"></div>
+    <div class="container-inscripcion">
+        <div class="nav">
+            <h1>Simulador |<p> Inscribir estudiante</p></h1>
+            <nav>
+                <a href="../index.html">Inicio</a>
+                <a href="">Inscripción</a>
+                <a href="administracion.html">Administración</a>
+                <button id="btnManejarDatos">Datos</button>
+            </nav>
+        </div>
+        
+        <div class="container-inscripcion-estudiante" id="containerI">
+            <form action="" id="formularioInscripcion">
+                <div class="formInscripcionNombres">
+                    <input type="text" id="primerNombreEstudianteInscripcion" required placeholder="Primer nombre*">
+                    <input type="text" id="segundoNombreEstudianteInscripcion" placeholder="Segundo nombre">
+                </div>
+                <div class="formInscripcionApellidos">
+                    <input type="text" id="primerApellidoEstudianteInscripcion" required placeholder="Primer apellido*">
+                    <input type="text" id="segundoApellidoEstudianteInscripcion" required placeholder="Segundo apellido*">
+                </div>
+                <div class="formInscripcionDatos">
+                    <input type="number" name="" id="cedulaEstudianteInscripcion" placeholder="Cedula sin punto ni guion*" required minlength="">
+                    <label for="fechaNacimientoEstudianteInscripcion">Fecha nacimiento*</label>
+                    <input type="date" name="" id="fechaNacimientoEstudianteInscripcion" max="2012-01-01" required>
+                </div>
+                <div class="formularioInscripcion-btn">
+                    <input type="button" value="INSCRIBIR" id="inscribirEstudiante" class="btn">
+                    <a href="administracion.html" class="btn btn-tertiary ocultar" id="btnFormAE">Administrar estudiantes>></a>
+                </div>
+                
+            </form>
+            <div class="container-inscripcion-estudiante-info">
+                <h2>Estudiantes inscriptos</h2>
+                <ul id="listaEstudiantesInscripto"> 
+                    <li>No tienes ningun estudiante inscripto.</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="../js/class.js"></script>
+    <script src="../js/funciones.js"></script>
+    <script src="../js/inscripcion.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
